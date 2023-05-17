@@ -10,5 +10,7 @@
 </div>
  
 @endforeach
+
+<a href="{{ route('admin.projects.create') }}"><button type="button">Crea un nuovo progetto</button></a>
     
 @endsection
