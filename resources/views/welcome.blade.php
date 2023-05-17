@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Welcome to the Laravel Boostrap Auth Template') }}</div>
-
+                <h1>welcome!</h1>
                 <div class="card-body">
                     Click on login or register in the menu to get started :)
                 </div>
