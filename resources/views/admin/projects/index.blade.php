@@ -6,7 +6,15 @@
 @foreach ($projects as $project)
 
 <div>
-    <h2><a href="{{ route('admin.projects.show', $project->id) }}">{{$project->title}}</a></h2>
+    <h2><a href="{{ route('admin.projects.show', $project) }}">{{$project->title}}</a></h2>
+    <a href="{{ route('admin.projects.edit', $project) }}"><button type="button">Modifica</button></a>
+    <form action="{{ route('admin.projects.destroy', $project->id) }}"
+        method="POST">
+        @csrf
+        @method('DELETE')
+        
+        <input type="submit" id="delete" value="Elimina">
+    </form>
 </div>
  
 @endforeach
