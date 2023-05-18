@@ -18,10 +18,10 @@
 @csrf
 
 <label for="title">Title</label>
-<input type="text" name="title" id="title">
+<input type="text" name="title" id="title" value="{{ old('title', $project->title) }}">>
 
 <label for="description">Description:</label>
-<input type="text" name="description" id="description">
+<input type="text" name="description" id="description" value="{{ old('description', $project->description) }}">>
 
 <input type="submit" value="Aggiungi Progetto!">
 </form>
