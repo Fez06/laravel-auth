@@ -14,7 +14,7 @@
 
 <h1>Crea un nuovo progetto!</h1>
 
-<form action="{{ route('admin.projects.update', $project) }}" method="POST">
+<form action="{{ route('admin.projects.update', $project) }}" method="POST" enctype="multipart/form-data">
     @csrf
 
     @method('PUT')
