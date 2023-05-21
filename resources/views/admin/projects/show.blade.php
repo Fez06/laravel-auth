@@ -7,4 +7,8 @@
 <p>
     {{$project->description}}
 </p>
+
+<div>
+    <img src="{{ asset('storage/' . $project->image)}}" alt="project image">
+</div>
 @endsection

@@ -14,16 +14,19 @@
 
 <h1>Crea un nuovo progetto!</h1>
 
-<form action="{{ route('admin.projects.store') }}" method="POST">
-@csrf
+<form action="{{ route('admin.projects.store') }}" method="POST" enctype="multipart/form-data">
+    @csrf
 
-<label for="title">Title</label>
-<input type="text" name="title" id="title" value="{{ old('title', $project->title) }}">>
+    <label for="title">Title</label>
+    <input type="text" class='form-control' name="title" id="title" value="{{ old('title') }}">
 
-<label for="description">Description:</label>
-<input type="text" name="description" id="description" value="{{ old('description', $project->description) }}">>
+    <label for="description">Description:</label>
+    <input type="text" class='form-control' name="description" id="description" value="{{ old('description') }}">
 
-<input type="submit" value="Aggiungi Progetto!">
+    <label for="image">Inserisci un'immagine:</label>
+    <input type="file" class='form-control' name="image" id="image" value="{{ old('image') }}">
+    <br>
+    <input type="submit" class='form-control' value="Aggiungi Progetto!">
 </form>
     
 @endsection
