@@ -26,7 +26,7 @@
     <input type="text" class='form-control' name="description" id="description" value="{{ old('description', $project->description) }}">
     <br>
     <label for="image">Inserisci un'immagine:</label>
-    <input type="file" class='form-control' name="image" id="image" value="{{ old('image', $project->image) }}">
+    <input type="file" class='form-control' name="image" id="image">
 
     <input type="submit" class='form-control' value="Modifica Progetto!">
 </form>

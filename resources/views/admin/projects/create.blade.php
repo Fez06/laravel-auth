@@ -24,7 +24,7 @@
     <input type="text" class='form-control' name="description" id="description" value="{{ old('description') }}">
 
     <label for="image">Inserisci un'immagine:</label>
-    <input type="file" class='form-control' name="image" id="image" value="{{ old('image') }}">
+    <input type="file" class='form-control' name="image" id="image">
     <br>
     <input type="submit" class='form-control' value="Aggiungi Progetto!">
 </form>

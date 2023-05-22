@@ -95,30 +95,11 @@ class ProjectController extends Controller
         //dd($request->all(), $request->post());
         $data = $request->all();
 
-        // if(empty($data['set_image'])){
-
-
-        //     if($project->image){
-        //         Storage::delete($project->image);
-        //         $project->image = null;
-        //     }
-
-
-
-        // } else {
-        //     if (isset($data['image'])) {
-
-        //         if($project->image){
-        //             Storage::delete($project->image);
-        //         }
-
-        //         $project->image = Storage::put('uploads', $data['image']);
-        //     }
-        // }
-        if($request->file('image')) {
-            $data['image'] = Storage::put('uploads', $data['image']);
+        
+        if($request->file('image')) { 
+            $data['image'] = Storage::put('uploads', $data['image']);  
         }
-
+        
         $project->update($data);
 
         return to_route('admin.projects.index', compact('project'));
