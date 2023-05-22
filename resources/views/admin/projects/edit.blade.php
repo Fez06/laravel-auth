@@ -20,15 +20,15 @@
     @method('PUT')
 
     <label for="title">Title</label>
-    <input type="text" name="title" id="title" value="{{ old('title', $project->title) }}">
+    <input type="text" class='form-control' name="title" id="title" value="{{ old('title', $project->title) }}">
     <br>
     <label for="description">Description:</label>
-    <input type="text" name="description" id="description" value="{{ old('description', $project->description) }}">
+    <input type="text" class='form-control' name="description" id="description" value="{{ old('description', $project->description) }}">
     <br>
     <label for="image">Inserisci un'immagine:</label>
-    <input type="file" name="image" id="image" value="{{ old('image', $project->image) }}">>
+    <input type="file" class='form-control' name="image" id="image" value="{{ old('image', $project->image) }}">
 
-    <input type="submit" value="Modifica Progetto!">
+    <input type="submit" class='form-control' value="Modifica Progetto!">
 </form>
 
 <h3><a href="{{ route('admin.projects.index')}}">Torna indietro</a></h3>
