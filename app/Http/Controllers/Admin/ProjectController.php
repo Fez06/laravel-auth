@@ -92,6 +92,7 @@ class ProjectController extends Controller
     public function update(UpdateProjectRequest $request, Project $project)
     {
         $request->validated();
+        dd($request->all(), $request->post());
         $data = $request->all();
 
         // if(empty($data['set_image'])){
@@ -114,6 +115,9 @@ class ProjectController extends Controller
         //         $project->image = Storage::put('uploads', $data['image']);
         //     }
         // }
+        if($request->file('image')) {
+            $data['image'] = Storage::put('uploads', $data['image']);
+        }
 
         $project->update($data);
 
