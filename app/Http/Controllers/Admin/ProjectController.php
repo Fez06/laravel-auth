@@ -92,8 +92,28 @@ class ProjectController extends Controller
     public function update(UpdateProjectRequest $request, Project $project)
     {
         $request->validated();
-        
         $data = $request->all();
+
+        // if(empty($data['set_image'])){
+
+
+        //     if($project->image){
+        //         Storage::delete($project->image);
+        //         $project->image = null;
+        //     }
+
+
+
+        // } else {
+        //     if (isset($data['image'])) {
+
+        //         if($project->image){
+        //             Storage::delete($project->image);
+        //         }
+
+        //         $project->image = Storage::put('uploads', $data['image']);
+        //     }
+        // }
 
         $project->update($data);
 
