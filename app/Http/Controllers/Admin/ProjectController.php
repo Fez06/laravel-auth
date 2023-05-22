@@ -92,7 +92,7 @@ class ProjectController extends Controller
     public function update(UpdateProjectRequest $request, Project $project)
     {
         $request->validated();
-        dd($request->all(), $request->post());
+        //dd($request->all(), $request->post());
         $data = $request->all();
 
         // if(empty($data['set_image'])){
